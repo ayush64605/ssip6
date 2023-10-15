@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Page</title>
+</head>
+<body>
+    <h1>Welcome to the Second Page</h1>
+
+    <p>User Input:</p>
+    <ul>
+        <li><strong></strong> <span id="name"></span></li>
+        <li><strong></strong> <span id="Taluka"></span></li>
+        <li><strong></strong> <span id="District"></span></li>
+        <li><strong></strong> <span id="state"></span></li>
+    </ul>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const data = urlParams.get("data");
+        const parts = data.split(",");
+        document.getElementById("name").textContent = parts[0].trim();
+        document.getElementById("Taluka").textContent = parts[1].trim();
+        document.getElementById("District").textContent = parts[2].trim();
+        document.getElementById("state").textContent = parts[3].trim();
+    </script>
+</body>
+</html>
